@@ -4,7 +4,8 @@
   "description": "Learning ",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    
+    "dev": "node app.js",
     "build": "npm i"
   },
   "author": "Soumadeep Sarkar",
