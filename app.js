@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require('express');
 const bodyParser=require('body-parser');
 const request=require('request');
@@ -9,8 +10,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.listen(3000,function(){
-    console.log("Server is running on port 3000");
+app.listen(process.env.PORT||3000,function(){
+    console.log(`Server is running on port 3000`);
 })
 
 app.get("/",function(req,res)
@@ -38,7 +39,7 @@ app.post("/",function(req,res){
     const url='https://us21.api.mailchimp.com/3.0/lists/18e811f1c9';
     const options={
         method:"POST",
-        auth:"soumadeep:1d066d252c5ce63b716ea397a8928eb6-us21"
+        auth:"soumadeep:f5d9a0964e423f963e5de7aeb96facbf-us21"
     }
     const jsonData=JSON.stringify(data);
     const request = https.request(url,options,function(response){
