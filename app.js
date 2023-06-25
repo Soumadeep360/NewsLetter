@@ -39,7 +39,7 @@ app.post("/",function(req,res){
     const url='https://us21.api.mailchimp.com/3.0/lists/18e811f1c9';
     const options={
         method:"POST",
-        auth:"soumadeep:7e22d72d5e1e3ba5c343ce55569a61f4-us21"
+        auth:"7f4df4c36d13a710c1fc98233dcecb39-us21"
     }
     const jsonData=JSON.stringify(data);
     const request = https.request(url,options,function(response){
